@@ -27,6 +27,52 @@
     @media(max-width:540px){.wrap{width:min(100% - 28px,1160px)}.nav{height:65px}.brand{font-size:19px}.nav-actions .pill-light{display:none}.hero{padding:20px 0 48px}.hero-card{min-height:425px;background-position:58% center}.hero-copy{padding:25px;width:100%}.hero h1{font-size:44px}.hero p{font-size:14px}.hero-note{right:14px;bottom:14px;padding:10px 13px}.perks{grid-template-columns:1fr 1fr}.perk:last-child{display:none}.section{padding-top:55px}.section-head{align-items:start}.grid{gap:10px}.card-image{height:137px}.card-body{padding:12px}.card h3{font-size:16px}.card p{font-size:11px;min-height:54px}.price{font-size:12px}.tag{font-size:9px}.add-btn{width:31px;height:31px}.about{grid-template-columns:1fr;padding:55px 0;gap:30px}.about-photo{height:260px}.about h2{font-size:36px}.footer-row{align-items:start;flex-direction:column}.footer-right{text-align:left}.two-col{grid-template-columns:1fr}.admin-table th:nth-child(3),.admin-table td:nth-child(3){display:none}.modal{padding:18px}.hero-cta .btn{padding:12px 15px;font-size:12px}}
     @media(max-width:800px){.schedule-card{grid-template-columns:1fr;gap:18px}}
     @media(max-width:540px){.schedule-card{padding:22px 17px}.schedule-card h2{font-size:30px}.hours-row{font-size:12px}}
+    /* Ajustes de layout para celulares; mantêm o conteúdo e os fluxos existentes. */
+    @media (max-width: 540px) {
+      .nav { gap: 10px; }
+      .nav-actions .pill { padding: 10px 12px; font-size: 12px; }
+      .hero-card { min-height: 500px; background-position: 61% center; }
+      .hero-copy { padding: 24px 20px 112px; }
+      .hero h1 { font-size: clamp(38px, 11vw, 44px); }
+      .hero-note { left: 14px; right: 14px; bottom: 12px; }
+      .perks { grid-template-columns: 1fr; gap: 8px; margin-top: -24px; }
+      .perk { padding: 11px 13px; }
+      .perk:last-child { display: flex; }
+      .section-head { flex-wrap: wrap; align-items: flex-start; gap: 10px; }
+      .section-head > .tag { margin-top: 2px; }
+      .grid { grid-template-columns: 1fr; gap: 13px; }
+      .card-image { height: clamp(170px, 54vw, 230px); }
+      .card-body { padding: 15px; }
+      .card h3 { font-size: 19px; }
+      .card p { font-size: 12px; min-height: 0; }
+      .card-foot { gap: 10px; }
+      .combo { margin-top: 44px; }
+      .combo-visual { min-height: 190px; height: 54vw; max-height: 250px; }
+      .combo-copy { padding: 25px 20px; }
+      .combo h2 { font-size: clamp(30px, 9vw, 38px); }
+      .about-photo { height: 58vw; min-height: 210px; max-height: 290px; }
+      .about-photo:after { right: 10px; }
+      .hours-row { gap: 12px; }
+      .cart-fab { right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); padding: 12px 15px; }
+      .drawer { padding: 18px 16px calc(18px + env(safe-area-inset-bottom)); }
+      .modal-wrap { padding: 10px; }
+      .modal { width: 100%; max-height: calc(100dvh - 20px); padding: 17px 15px; }
+      .two-col { grid-template-columns: 1fr; }
+      .form-row input, .form-row textarea, .form-row select { font-size: 16px; }
+      .admin-bar { align-items: flex-start; gap: 10px; }
+      .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .admin-table { min-width: 520px; }
+      .admin-table th:nth-child(3), .admin-table td:nth-child(3) { display: table-cell; }
+    }
+    @media (max-width: 380px) {
+      .wrap { width: calc(100% - 24px); }
+      .brand { font-size: 17px; gap: 7px; }
+      .brand-mark { width: 34px; height: 34px; }
+      .nav-actions .pill { padding: 9px 10px; }
+      .hero-cta { gap: 8px; }
+      .hero-cta .btn { width: 100%; text-align: center; }
+      .drawer-head h2, .modal-head h2 { font-size: 23px; }
+    }
   </style>
 </head>
 <body>
